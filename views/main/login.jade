@@ -1,0 +1,80 @@
+doctype html
+html(lang='en')
+	head
+		// Required meta tags
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+		link(href='https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap' rel='stylesheet')
+		link(rel='stylesheet' href='/adminlte/template1/fonts/icomoon/style.css')
+		link(rel='stylesheet' href='/adminlte/template1/css/owl.carousel.min.css')
+		// Bootstrap CSS
+		link(rel='stylesheet' href='/adminlte/template1/css/bootstrap.min.css')
+		// Style
+		link(rel='stylesheet' href='/adminlte/template1/css/style.css')
+
+		meta(charset='utf-8')
+		meta(content='width=device-width, initial-scale=1.0' name='viewport')
+		meta(content='' name='description')
+		meta(content='' name='keywords')
+		// Google Fonts
+		link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i' rel='stylesheet')
+		// Vendor CSS Files
+		link(href='/adminlte/template/assets/vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet')
+		link(href='/adminlte/template/assets/vendor/bootstrap-icons/bootstrap-icons.css' rel='stylesheet')
+		link(href='/adminlte/template/assets/vendor/boxicons/css/boxicons.min.css' rel='stylesheet')
+		link(href='/adminlte/template/assets/vendor/glightbox/css/glightbox.min.css' rel='stylesheet')
+		link(href='/adminlte/template/assets/vendor/swiper/swiper-bundle.min.css' rel='stylesheet')
+		// Template Main CSS File
+		link(href='/adminlte/template/assets/css/style.css' rel='stylesheet')
+	body
+		.d-lg-flex.half
+			.bg.order-1.order-md-2(style="background-image: url('/images/office.jpg');")
+			.contents.order-2.order-md-1
+				.container
+					.row.align-items-center.justify-content-center
+						.col-md-7(style="margin-top: 5%")
+							.mb-3
+								h3 Sign In
+							- if (messages.msg_error) 
+								.alert.alert-danger.bg-danger.text-light.border-0.alert-dismissible
+									button.btn-close.btn-close-white(type='button' data-dismiss='alert' aria-label='Close')
+									h4
+										i.icon.fa.fa-ban
+										| Alert! 
+									| !{messages.msg_error}
+							- if  (messages.msg_info)
+								.alert.alert-success.bg-success.text-light.border-0.alert-dismissible
+									button.btn-close.btn-close-white(type='button' data-dismiss='alert' aria-label='Close')
+									h4
+										i.icon.fa.fa-check
+										| Success!
+									| !{messages.msg_info}
+							form(action='/login' method='post')
+								.form-group.first
+									input#email.form-control(type="text" name="txtEmail" placeholder="Username")
+								.form-group.last.mb-3
+									input#password.form-control(type="password" name="txtPassword" placeholder="Password")
+								.d-flex.mb-5.align-items-center
+									label.control.control--checkbox.mb-0
+										span.caption Remember me
+										input(type='checkbox')
+										.control__indicator
+								input.btn.btn-block.btn-primary(type='submit' value='Log In')
+								.row(style="text-align: center; justify-content: center")
+									label.text-center.my-3.text-muted Don't have any account?  
+										a(href='/register' style="text-decoration: none; color: blue").text-center  Sign Up
+
+		script(src='/adminlte/template1/js/jquery-3.3.1.min.js')
+		script(src='/adminlte/template1/js/popper.min.js')
+		script(src='/adminlte/template1/js/bootstrap.min.js')
+		script(src='/adminlte/template1/js/main.js')
+		// Vendor JS Files
+		script(src='/adminlte/template/assets/vendor/purecounter/purecounter.js')
+		script(src='/adminlte/template/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')
+		script(src='/adminlte/template/assets/vendor/glightbox/js/glightbox.min.js')
+		script(src='/adminlte/template/assets/vendor/isotope-layout/isotope.pkgd.min.js')
+		script(src='/adminlte/template/assets/vendor/swiper/swiper-bundle.min.js')
+		script(src='/adminlte/template/assets/vendor/waypoints/noframework.waypoints.js')
+		script(src='/adminlte/template/assets/vendor/php-email-form/validate.js')
+		// Template Main JS File
+		script(src='/adminlte/template/assets/js/main.js')

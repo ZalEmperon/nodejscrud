@@ -1,0 +1,71 @@
+extends ../layout/base
+block content
+    section.content-header
+        h1
+            | Add Customer
+            small it all starts here
+        ol.breadcrumb
+            li
+                a(href='#')
+                    i.fa.fa-dashboard
+                    | Level
+                li.active Here
+    section.content
+        .box
+            .box-header.with-border
+                h3.box-title
+                    | Customer
+                .box-tools.pull-right
+                    button(type='button' data-widget='collapse' data-toggle='tooltip' title='collapse').btn.btn-box-tool
+                        i.fa.fa-minus
+
+            .box-body
+                form(role='form' method='post' action='/customers/add' enctype="multipart/form-data")
+                    .row
+                        .col-xs-6
+                            .box-body
+                                - if (messages.msg_error)
+                                    .alert.alert-danger.alert-dismissable
+                                        button.close(type='button' data-dismiss='alert' aria-hidden='true')
+                                            | ×
+                                        h4
+                                            i.icon.fa.fa-ban
+                                            | Alert!
+                                        | !{messages.msg_error}
+                                .form-group
+                                    label
+                                        | NIP
+                                    input(type='text' name='nip' placeholder='Enter NIP', autofocus).form-control
+                                .form-group
+                                    label
+                                        | Nama
+                                    input(type='text' name='nama' placeholder='Enter Nama').form-control
+                                .form-group
+                                    label
+                                        | Alamat
+                                    input(type='text' name='alamat' placeholder='Enter Alamat').form-control
+                                .form-group
+                                    label
+                                        | No Telp
+                                    input(type='text' name='no_hp' placeholder='Enter No Telp').form-control
+                                .form-group
+                                    label
+                                        | Status
+                                    select#fakultas(name="status").form-control
+                                        option(value="") Masukan Status
+                                        option(value="Honorer") Honorer
+                                        option(value="Pegawai") Pegawai
+                                .form-group
+                                    label
+                                        | Jabatan
+                                    input(type='text' name='jabatan' placeholder='Enter Jabatan').form-control
+                                .form-group
+                                    label
+                                        | Foto
+                                    input(type='file' name='gambar').form-control
+                            .box-footer
+                                button(type='submit').btn.btn-primary
+                                    | Submit
+
+                                a(href='/customers/pegawai').btn.btn-primary.pull-right
+                                    | Back

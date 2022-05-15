@@ -1,0 +1,37 @@
+header.main-header 
+    a(href='/').logo
+        span.logo-mini
+            <b>A</b> LTE
+        span.logo-lg
+            <b>Admin</b> LTE
+    nav(role='navigation').navbar.navbar-static-top
+        a(href='#',  role='button',  data-toggle='offcanvas').sidebar-toggle 
+            span.sr-only Toggle Navigation
+            span.icon-bar 
+            span.icon-bar 
+            span.icon-bar 
+        div.navbar-custom-menu
+            ul.nav.navbar-nav 
+                li.dropdown.user.user-menu
+                    a(href='#',data-toggle='dropdown').dropdown-toggle 
+                        img(src='/adminlte/dist/img/uservera.jpeg',alt='User Image').user-image
+                        span.hidden-xs
+                            | EKA VERANTINA 
+                    ul.dropdown-menu
+                        li.user-header
+                            img(src='/adminlte/dist/img/uservera.jpeg',alt='User Image').img-circle
+                            p
+                                | EKA VERANTINA - Web Developer 
+                                small
+                                    | Member since Nov. 2012 
+                        li.user-body
+                            .row
+                                .col-xs-4.text-center 
+                                    a(href='#')
+                                        | Followers
+                                .col-xs-4.text-center 
+                                    a(href='#')
+                                        | Sales
+                                .col-xs-4.text-center 
+                                    a(href='#')
+                                        | Friends
